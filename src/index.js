@@ -22,6 +22,18 @@ function updateTime() {
       "hh:mm:ss [<small>]A[</small>]"
     );
   }
+
+  let vancouverElement = document.querySelector("#vancouver");
+  if (vancouverElement) {
+    let vancouverDateElement = vancouverElement.querySelector(".date");
+    let vancouverTimeElement = vancouverElement.querySelector(".time");
+    let vancouverTime = moment().tz("America/Vancouver");
+
+    vancouverDateElement.innerHTML = vancouverTime.format("MMMM Do, YYYY");
+    vancouverTimeElement.innerHTML = vancouverTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
@@ -45,6 +57,8 @@ function updateCity(event) {
           "hh:mm:ss"
         )} <small>${cityTime.format("A")}</div>
     </div>
+    <hr />
+    <center><a href="https://worldclocktamika.netlify.app/">All cities</a></center>
   `;
 }
 
