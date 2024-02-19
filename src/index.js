@@ -55,7 +55,7 @@ function updateCity(event) {
         </div>
         <div class="time">${cityTime.format(
           "hh:mm:ss"
-        )} <small>${cityTime.format("A")}</div>
+        )} <small>${cityTime.format("A")}</small></div>
     </div>
     <hr />
     <center><a href="https://worldclocktamika.netlify.app/">All cities</a></center>
