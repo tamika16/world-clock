@@ -23,14 +23,14 @@ function updateTime() {
     );
   }
 
-  let vancouverElement = document.querySelector("#vancouver");
-  if (vancouverElement) {
-    let vancouverDateElement = vancouverElement.querySelector(".date");
-    let vancouverTimeElement = vancouverElement.querySelector(".time");
-    let vancouverTime = moment().tz("America/Vancouver");
+  let memmingenElement = document.querySelector("#memmingen");
+  if (memmingenElement) {
+    let memmingenDateElement = memmingenElement.querySelector(".date");
+    let memmingenTimeElement = memmingenElement.querySelector(".time");
+    let memmingenTime = moment().tz("Europe/Berlin");
 
-    vancouverDateElement.innerHTML = vancouverTime.format("MMMM Do, YYYY");
-    vancouverTimeElement.innerHTML = vancouverTime.format(
+    memmingenDateElement.innerHTML = memmingenTime.format("MMMM Do, YYYY");
+    memmingenTimeElement.innerHTML = memmingenTime.format(
       "hh:mm:ss [<small>]A[</small>]"
     );
   }
